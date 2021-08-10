@@ -1,0 +1,18 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      Wikinimous
+    </div>
+    <div class="collapse navbar-collapse">
+      <%= link_to "Add a new article", new_article_path %>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <br>
+  <div>
+    <% @articles.each do |article| %>
+        <%= link_to article.title, article_path(article) %> <br>
+    <% end %>
+  </div>
+</div>
